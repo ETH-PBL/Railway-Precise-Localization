@@ -12,7 +12,7 @@ cellular module, (B) ZED-F9P GNSS module, (C) STM32L452CEU MCU, (D)
 microSD card, (E) ASM330LHH IMU
 
 
-Courtesy of Trenitalia we were able to access the drivers cabin of an ETR103 passenger train, commuting between Modena and Formigine in Italy totaling 6 runs in two days.  
+Courtesy of Trenitalia we were able to access the drivers cabin of an ETR103 passenger train, commuting between Modena and Formigine in Italy totaling 8 runs in two days.  
 
 ![](figs/modena_train.jpg)
 
