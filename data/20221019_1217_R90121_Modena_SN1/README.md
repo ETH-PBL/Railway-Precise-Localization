@@ -18,7 +18,7 @@
 | IMU dt points           | 5052624                  |
 | IMU dt error rate       | 1.78ppm                  |
 | RTK coverage            | 87.23%                   |
-| Sat. coverage (numSv>5) | 95.21117392750249%       |
+| Sat. coverage (numSv>5) | 95.21%                   |
 | Included Breakpoints    | 27                       |
 | Included Stations       | 8                        |
 
