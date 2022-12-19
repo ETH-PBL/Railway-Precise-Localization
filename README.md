@@ -19,7 +19,7 @@ Courtesy of Trenitalia we were able to access the drivers cabin of an ETR103 pas
 The track was chosen as it exposes a variety of interesting GNSS environments.
 Encountered environments are ranging from urban over suburban to open field environments as well as one tunnel.
 Due to this composition the availability of cellular connection and thus RTK correction data was patchy but mostly stable.
-<img src="figs/track.png" alt="drawing" width="894"/>
+<img src="figs/track.png" alt="drawing" width="10%"/>
 
 The two sensor nodes were fixed to the Train Chassis, one centered in the train the other positioned on the left side in driving orientation. 
 
