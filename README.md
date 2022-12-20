@@ -1,8 +1,3 @@
-<script
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-  type="text/javascript">
-</script>
-
 # Precise Railway Localization
 ## Experiment description
 This repository contains the datasets acquired by ETH-PBL in conjunction with Unibo and SADEL during two days of testing in October 2022 near Modena, Italy.
@@ -61,8 +56,8 @@ This data is acquired using the onboard real-time clock and thus drifts by about
     |-------|-------|-------|-------|-------|-------|
     | Gyr X | Gyr Y | Gyr Z | Acc X | Acc Y | Acc Z |
 
-    The data for each axis was recorded with $\pm 2 \text{g}$ and $\pm 125 \text{dps}$ respectively.
-    The LSB of each value will thus correspond to $0.061\text{mg}$ for the accelerometer data or $4.37\text{mdps}$ for the gyroscope data as described in Table 3 of the ASM330LHH datasheet.
+    The data for each axis was recorded with ±2g and ±125dps respectively.
+    The LSB of each value will thus correspond to 0.061mg for the accelerometer data or 4.37mdps for the gyroscope data as described in Table 3 of the ASM330LHH datasheet.
 
 * `U` GNSS Data  
     The `DATA` in this entry is encoded using the UBX Protocol (as described [here in chapter 3](https://content.u-blox.com/sites/default/files/documents/u-blox-F9-HPG-1.32_InterfaceDescription_UBX-22008968.pdf)).  
