@@ -57,7 +57,7 @@ This data is acquired using the onboard real-time clock and thus drifts by about
     | Gyr X | Gyr Y | Gyr Z | Acc X | Acc Y | Acc Z |
 
     The data for each axis was recorded with ±2g and ±125dps respectively.
-    The LSB of each value will thus correspond to 0.061mg for the accelerometer data or 4.37mdps for the gyroscope data as described in Table 3 of the ASM330LHH datasheet.
+    The LSB of each value will thus correspond to 0.061mg for the accelerometer data or 4.37mdps for the gyroscope data as described in [Table 3 of the ASM330LHH datasheet](https://www.st.com/resource/en/datasheet/asm330lhh.pdf).
 
 * `U` GNSS Data  
     The `DATA` in this entry is encoded using the UBX Protocol (as described [here in chapter 3](https://content.u-blox.com/sites/default/files/documents/u-blox-F9-HPG-1.32_InterfaceDescription_UBX-22008968.pdf)).  
