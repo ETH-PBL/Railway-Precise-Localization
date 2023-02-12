@@ -1,4 +1,6 @@
 # Precise Railway Localization
+> Note: This repository currently only contains a sample set of the collected data, consisting of the initial 2000 lines for each run.
+
 ## Experiment description
 This repository contains the datasets acquired by ETH-PBL in conjunction with Unibo and SADEL during two days of testing in October 2022 near Modena, Italy.
 
