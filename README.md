@@ -115,7 +115,20 @@ For example, `20221020_1252_R90120_Formigine_SN1` will contain the dataset recor
 
 Each folder contains a `.csv` file containing the raw recorded data as well as a `Readme.md` containing a preliminary analysis of different metrics regarding the given data such as runtime, GNSS availability, etc. 
 
+## Acknowledges
 
+If you use **Railway-Precise-Localization** in an academic or industrial context, please cite the following publications:
+
+~~~~
+@inproceedings{amatetti2022towards,
+  title={Towards the Future Generation of Railway Localization and Signaling Exploiting sub-meter RTK GNSS},
+  author={Amatetti, Carla and Polonelli, Tommaso and Masina, Enea and Moatti, Charles and Mikhaylov, Denis and Amato, Davide and Vanelli-Coralli, Alessandro and Magno, Michele and Benini, Luca},
+  booktitle={2022 IEEE Sensors Applications Symposium (SAS)},
+  pages={1--6},
+  year={2022},
+  organization={IEEE}
+}
+~~~~
 
 
 
