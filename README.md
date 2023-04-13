@@ -1,3 +1,23 @@
+<!--
+*** Template source: https://github.com/othneildrew/Best-README-Template/blob/master/README.md
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
+[![License][issues-shield]][issues-url]
+
+
 # Precise Railway Localization
 > Note: This repository currently only contains a sample set of the collected data, consisting of the initial 2000 lines for each run.
 
@@ -94,4 +114,18 @@ The date specified is the date of recording whereas the time given does not nece
 For example, `20221020_1252_R90120_Formigine_SN1` will contain the dataset recorded on the 20th of October 2022 onboard train R90120 scheduled for departure at 12:52. The train is traveling from Formigine to Modena and the dataset was recorded using Sensor Node 1.
 
 Each folder contains a `.csv` file containing the raw recorded data as well as a `Readme.md` containing a preliminary analysis of different metrics regarding the given data such as runtime, GNSS availability, etc. 
-g
+
+
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/ETH-PBL/Railway-Precise-Localization.svg?style=flat-square
+[contributors-url]: https://github.com/ETH-PBL/Railway-Precise-Localization/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ETH-PBL/Railway-Precise-Localization.svg?style=flat-square
+[forks-url]: https://github.com/ETH-PBL/Railway-Precise-Localization/network/members
+[stars-shield]: https://img.shields.io/github/stars/ETH-PBL/Railway-Precise-Localization.svg?style=flat-square
+[stars-url]: https://github.com/ETH-PBL/Railway-Precise-Localization/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ETH-PBL/Railway-Precise-Localization.svg?style=flat-square
+[issues-url]: https://github.com/ETH-PBL/Railway-Precise-Localization/issues
+[license-shield]: https://img.shields.io/github/license/ETH-PBL/Railway-Precise-Localization.svg?style=flat-square
+[license-url]: https://github.com/ETH-PBL/Railway-Precise-Localization/blob/master/LICENSE
