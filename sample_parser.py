@@ -145,7 +145,7 @@ import matplotlib.pyplot as plt
 import math
 # this function takes a tuple (I, PVT, COV, BRK) as an input
 # (the same as `parse` returns)
-def sample_plot(data):
+def sample_plot(data, output = None):
     (I, PVT, COV, BRK) = data
     I['dt'] = I['t'].diff()
 
@@ -175,7 +175,7 @@ def sample_plot(data):
 
     timeUnit = f"{1/multiplier}s"
     if multiplier <= 1e9:
-        timeUnit = ["s", "ms", "us", "ns"][max(0, math.floor(math.log(multiplier)/3))]
+        timeUnit = ["s", "ms", "us", "ns"][max(0, math.floor(math.log10(multiplier)/3))]
 
     dt_plot.set_ylabel(f'time step dt [{timeUnit}]')
 
@@ -199,3 +199,20 @@ def sample_plot(data):
     fig.tight_layout() 
 
     fig.show()
+
+    if output != None:
+        fig.savefig(output)
+
+
+
+if __name__ == "__main__":
+    import sys
+    args = sys.argv[1:]
+    if len(args) < 1:
+        print(sys.argv[0], "<data_path> [output_path]")
+        exit()
+    file = args[0]
+    print(f"Parsing {file}...")
+    data = parse(file)
+    print(f"Plotting parsed data...")
+    sample_plot(data, args[1] if len(args) == 2 else None)

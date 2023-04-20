@@ -32,6 +32,19 @@ cd Railway-Precise-Localization
 bash download.sh
 ```
 
+## Testing the parser script
+For your convenience a sample python parser script is provided. The script includes the parsing and plotting of basic information extracted from the experiment data.  
+To plot the data from any of the data files execute
+```bash
+pip install -r requirements.txt
+python sample_parser.py <data_file.csv> [output_for_fig.png]
+```  
+> Note: To plot the data matplotlib is required which might need to be installed differently depending on your OS.
+> If the script is not showing any plot there is most probably something wrong with the setup of matplotlib. 
+
+The generated plot will be similar to the ones describing the different datasets.
+
+
 ## Experiment description
 This repository contains the datasets acquired by ETH-PBL in conjunction with Unibo and SADEL during two days of testing in October 2022 near Modena, Italy.
 
