@@ -33,11 +33,11 @@ bash download.sh
 ```
 
 ## Testing the parser script
-For your convenience a sample python parser script is provided. The script includes the parsing and plotting of basic information extracted from the experiment data.  
-To plot the data from any of the data files execute
+For your convenience, a sample Python parser script is provided. The script includes the parsing and plotting of basic information extracted from the experiment data.  
+To plot the data from any of the data files, execute
 ```bash
 pip install -r requirements.txt
-python sample_parser.py <data_file.csv> [output_for_fig.png]
+python3 sample_parser.py <data_file.csv> [output_for_fig.png]
 ```  
 > Note: To plot the data matplotlib is required which might need to be installed differently depending on your OS.
 > If the script is not showing any plot there is most probably something wrong with the setup of matplotlib. 
@@ -106,7 +106,7 @@ This data is acquired using the onboard real-time clock and thus drifts by about
     The LSB of each value will thus correspond to 0.061mg for the accelerometer data or 4.37mdps for the gyroscope data as described in [Table 3 of the ASM330LHH datasheet](https://www.st.com/resource/en/datasheet/asm330lhh.pdf).
 
 * `U` GNSS Data  
-    The `DATA` in this entry is encoded using the UBX Protocol (as described [here in chapter 3](https://content.u-blox.com/sites/default/files/documents/u-blox-F9-HPG-1.32_InterfaceDescription_UBX-22008968.pdf)).  
+    The `DATA` in this entry is encoded using the UBX Protocol (as described [here in Chapter 3](https://content.u-blox.com/sites/default/files/documents/u-blox-F9-HPG-1.32_InterfaceDescription_UBX-22008968.pdf)).  
     The data for day 1 only includes `UBX-NAV-PVT` messages, whereas day two also includes `UBX-NAV-COV`
 
 * `BRK` Custom Breakpoints / Events  
@@ -130,14 +130,37 @@ This data is acquired using the onboard real-time clock and thus drifts by about
     The station name is given in the `DATA` field.
 
 
-# Folder structure
+## Folder structure
 The published data is available in the `data` subfolder.
 In this folder, there exists a subfolder for each collected dataset.
 The naming scheme of these subfolders is `yyyyMMDD_HHMM_TrainNr_StartStation_NodeNr`.
 The date specified is the date of recording, whereas the time given does not necessarily correspond to the start of the recording but rather to the planned departure time of the train.
 For example, `20221020_1252_R90120_Formigine_SN1` will contain the dataset recorded on the 20th of October 2022 onboard train R90120 scheduled for departure at 12:52. The train is traveling from Formigine to Modena, and the dataset was recorded using Sensor Node 1.
 
-Each folder contains a `.csv` file containing the raw recorded data as well as a `Readme.md` containing a preliminary analysis of different metrics regarding the given data such as runtime, GNSS availability, etc. 
+Each folder contains a `.csv` file containing the raw recorded data as well as a `Readme.md` containing a preliminary analysis of different metrics regarding the given data, such as runtime, GNSS availability, etc. 
+
+### Given Metrics
+
+| Name                   | Description                                                                      |
+|------------------------|----------------------------------------------------------------------------------|
+| Sensor node            | ID of the used node, either `Sensor Node 1` or ` Sensor Node 2`                  |
+| Direction              | Direction of travel, `Formigine -> Modena` or vise versa                         |
+| Train Nr.              | Train number according to schedule by TRENITALIA TPER Linea Modena-Sassuolo      |
+| Planned Departure      | Timestamp of scheduled train departure                                           |
+| First GNSS timestamp   | Timestamp of first GNSS PVT packet contained in dataset                          |
+| Last GNSS timestamp    | Timestamp of last GNSS PVT packet contained in dataset                           |
+| Data corruptions       | Number of lines in csv file that are not parsable                                |
+| Data points            | Number of lines in the csv file                                                  |
+| PVT datapoints         | Number of GNSS PVT (Position, Velocity, Time) packets                            |
+| Covariance datapoints  | Number of GNSS covariance datapoints                                             |
+| Runtime RTC/GNSS       | Measuring time w.r.t. on board RTC and GNSS time                                 |
+| IMU dt Outliers        | Number of IMU datapoints outside a +-10% time interval w.r.t. the last datapoint |
+| IMU dt points          | Total number of IMU datapoints                                                   |
+| IMU dt error rate      | IMU dt Outliers / IMU dt points                                                  |
+| RTK coverage           | Percentage of GNSS PVT packets including precise RTK data                        |
+| Sat. coverage (numSv>5)| Percentage of GNSS PVT packets with number of visible satellites larger than 5   |
+| Included Breakpoints   | Number of breakpoints (`BRK`)                                                    |
+| Included Stations      | Number of stations (`ARR`/`DEP`)                                                 |
 
 ## Acknowledges
 
