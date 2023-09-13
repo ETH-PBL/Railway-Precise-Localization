@@ -177,6 +177,16 @@ If you use **Railway-Precise-Localization** in an academic or industrial context
 }
 ~~~~
 
+~~~~
+@article{mikhaylov2023towards,
+  title={Towards the Future Generation of Railway Localization Exploiting RTK and GNSS},
+  author={Mikhaylov, Denis and Amatetti, Carla and Polonelli, Tommaso and Masina, Enea and Campana, Riccardo and Berszin, Kai and Moatti, Charles and Amato, Davide and Vanelli-Coralli, Alessandro and Magno, Michele and others},
+  journal={IEEE Transactions on Instrumentation and Measurement},
+  year={2023},
+  publisher={IEEE}
+}
+~~~~
+
 
 [zenodo-url]: https://zenodo.org/record/7823090
 [contributors-shield]: https://img.shields.io/github/contributors/ETH-PBL/Railway-Precise-Localization.svg?style=flat-square
